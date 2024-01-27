@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="row">
+<div class="col-8 offset-2">
+    <h3>Add new Airbnb:</h3>
+    <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-2">
+            <label for="title" class="form-label">Title</label> 
+            <input name="listing[title]" placeholder="Add a cachy title" type="text" class="form-control" required>
+            <div class="invalid-feedback">Add a valid title</div>
+        </div>    
+        <div class="mb-2">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" name="listing[description]" rows="2" cols="100" placeholder="Enter description" class="form-control" required ></textarea>
+            <div class="invalid-feedback">Add a valid description</div>
+        </div>
+        <div class="mb-2">
+            <label for="image" class="form-label">Upload Airbnb Image</label>      
+            <input type="file" name="listing[image]" class="form-control" required>
+        </div>
+        <div class="row">
+            <div class="mb-2 col-md-5">
+                <label for="price" class="form-label">Price</label>
+                <input  name="listing[price]" placeholder="Enter price"  class="form-control" required >
+                <div class="invalid-feedback">Add valid price</div>
+            </div>
+            <div class="mb-2 col-md-7">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="listing[country]" placeholder="Enter country" class="form-control" required>
+                <div class="invalid-feedback">Add a valid country name</div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="location" class="form-label">Location</label>           
+            <input type="text" name="listing[location]" placeholder="Enter location" class="form-control" required>
+            <div class="invalid-feedback">Add a valid location</div>
+        </div>
+        
+        <button class="btn btn-dark add-btn">Add</button>
+    </form>
+</div>
+</div>
